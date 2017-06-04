@@ -1,9 +1,12 @@
 #! /bin/bash
+sudo apt-get update
+sudo apt-get dist-upgrade
 ifconfig
 read -p "input your IP : " IP
 read -p "install shadowsocks ? (n or enter " TMP
 if [ $TMP=="" ]
 then apt install python python-pip
+pip install setuptools
 pip install shadowsocks
 read -p "input your passworld : " PASSWD
 echo "{
